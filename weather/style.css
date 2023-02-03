@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Mark Pro Black';
+    src: url("./MarkPro-Black.otf");
+}
+
+@font-face {
+    font-family: 'Mark Pro Bold';
+    src: url("./Mark Pro Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Mark Pro Medium';
+    src: url("./Mark Pro Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Mark Pro Regular';
+    src: url("./Mark Pro.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: block;
+    width: 500px;
+}
+
+.input input {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: 0;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-bottom: 1px solid white;
+    font-family: 'Mark Pro Regular';
+    color: white;
+}
+
+.input span {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -480px;
+    color: white;
+    user-select: none;
+    cursor: text;
+    font-size: 15px;
+    font-family: 'Mark Pro Regular';
+    transition: 0.3s;
+}
+
+.input input:focus + span,
+.input input:valid + span {
+    margin-top: -7.5px;
+    font-size: 12.5px;
+}
+
+.loading {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 50px auto;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid white;
+    border-left: 0px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 100%;
+    animation: loading 1s linear infinite;
+}
+
+.output {
+    display: none;
+    margin-top: 20px;
+    padding: 15px 20px;
+    justify-content: space-around;
+}
+
+.output .temp {
+    color: white;
+    font-size: 50px;
+    font-family: 'Mark Pro Medium';
+}
+
+.output .temp-max {
+    color: white;
+    font-size: 17.5px;
+    font-family: 'Mark Pro Regular';
+}
+
+.output .temp-min {
+    color: white;
+    font-size: 17.5px;
+    font-family: 'Mark Pro Regular';
+}
+
+.output .wind-speed {
+    color: white;
+    font-family: 'Mark Pro Regular';
+}
+
+.output .humidity {
+    color: white;
+    font-family: 'Mark Pro Regular';
+}
