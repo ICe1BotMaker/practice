@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <style id="style">
+        #channel1:checked ~ .right #channel1_view { display: block; }
+        #channel1:checked ~ .left .list ul li[data-for="channel1"] { border: 2px solid #27a827; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mac-box">
+            <input type="radio" name="channel" id="channel1" style="display: none;" checked>
+
+            <div class="left">
+                <div class="control">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li data-for="channel1">
+                            <label for="channel1">
+                                <img src="chatgpt.jpg" alt="channel_icon">
+                            </label>
+                        </li>
+                        <li>+</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div id="channel1_view">
+                    <div class="channel_head">
+                        <div class="title">
+                            <a class="title-t">Channel 1</a>
+                            <a class="title-d">openai chatgpt</a>
+                        </div>
+
+                        <div class="search-box">
+                            <input type="text" id="search-input">
+                            <button id="search-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 513.749 513.749" style="enable-background:new 0 0 513.749 513.749;" xml:space="preserve" width="512" height="512">
+                                    <g>
+                                        <path d="M504.352,459.061l-99.435-99.477c74.402-99.427,54.115-240.344-45.312-314.746S119.261-9.277,44.859,90.15   S-9.256,330.494,90.171,404.896c79.868,59.766,189.565,59.766,269.434,0l99.477,99.477c12.501,12.501,32.769,12.501,45.269,0   c12.501-12.501,12.501-32.769,0-45.269L504.352,459.061z M225.717,385.696c-88.366,0-160-71.634-160-160s71.634-160,160-160   s160,71.634,160,160C385.623,314.022,314.044,385.602,225.717,385.696z"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="channel_body">
+                        <div class="my-chat">
+                            <label class="profile_avatar" for="">
+                                <div class="avatar">
+                                    <img src="illust-first-design.jpg" alt="profile">
+                                </div>
+                            </label>
+                            <div class="text">
+                                Hello, Nice to meet you. and you?
+                            </div>
+                        </div>
+                        <div class="bot-chat">
+                            <label class="profile_avatar" for="">
+                                <div class="avatar">
+                                    <img src="app-logo.jpg" alt="profile">
+                                </div>
+                            </label>
+                            <div class="text">
+                                Nice to meet you too!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message_input">
+                        <input type="text" id="message" placeholder="Input text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

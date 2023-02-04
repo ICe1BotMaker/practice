@@ -1,0 +1,330 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body { background: url("./chatgpt.jpg") no-repeat; background-size: cover; }
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mac-box {
+    width: 1820px;
+    height: 900px;
+    border-radius: 15px;
+    background: #232830;
+    display: flex;
+}
+
+
+.left {
+    width: 125px;
+    height: 100%;
+    background: #14171C;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.left .control {
+    width: 65px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left .control > span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.left .control > span:nth-child(1) { background: #FF4141; }
+.left .control > span:nth-child(2) { background: #FFAD41; }
+.left .control > span:nth-child(3) { background: #73FF41; }
+
+.left .list {
+    height: 880px;
+}
+
+.left .list ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.left .list ul li {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background: #1a1d24;
+    color: #4c5568;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.1s;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.left .list ul li label { cursor: pointer; }
+
+.left .list ul li img {
+    width: 100%;
+}
+
+.left .list ul li:hover {
+    filter: opacity(0.95) drop-shadow(0 0 rgb(0, 0, 0));
+}
+
+
+.right {
+    margin-left: 95px;
+    width: 100%;
+    margin-right: 95px;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.right > div {
+    display: none;
+    height: 100%;
+}
+
+.right > div > .channel_head {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right > div > .channel_head .title { color: white; }
+
+.right > div > .channel_head .title .title-t {
+    font-size: 25px;
+    font-family: 'Mark Pro Medium';
+}
+
+.right > div > .channel_head .title .title-d {
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: 'Mark Pro Regular';
+}
+
+.right > div > .channel_head .search-box {
+    width: 305px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right > div > .channel_head .search-box input {
+    padding: 0 20px;
+    height: 45px;
+    outline: none;
+    border: 0;
+    width: 250px;
+    background: #333C48;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Mark Pro Regular';
+}
+
+.right > div > .channel_head .search-box button {
+    padding: 10px;
+    outline: none;
+    border: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background: #333C48;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right > div > .channel_head .search-box button:hover {
+    filter: opacity(0.95) drop-shadow(0 0 rgb(0, 0, 0));
+}
+
+.right > div > .channel_head .search-box button:hover > svg {
+    fill: #8a97a8;
+}
+
+.right > div > .channel_head .search-box svg {
+    width: 50%;
+    fill: #b1c2d8;
+}
+
+
+.right > div > .channel_body {
+    width: 100%;
+    height: 650px;
+    margin-bottom: 25px;
+    overflow-y: scroll;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.right > div > .channel_body > div:first-child {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.right > div > .channel_body > div:last-child {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.right > div > .channel_body .bot-chat {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    background: #354052;
+}
+
+.right > div > .channel_body .my-chat {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    background: #292F3B;
+}
+
+.right > div > .channel_body .profile_avatar {
+    width: 105px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > div > .channel_body .avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right > div > .channel_body .avatar img {
+    width: 100%;
+}
+
+.right > div > .channel_body .text {
+    margin-top: 37.5px;
+    color: white;
+    font-family: 'Mark Pro Regular';
+    line-height: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.right > div > .channel_body .text pre {
+    font-family: 'Mark Pro Regular';
+}
+
+.right > div > .channel_body .text .loading {
+    display: flex;
+}
+
+@keyframes loading-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.right > div > .channel_body .text .loading span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border-left: 2px solid white;
+    border-right: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    margin-right: 15px;
+    animation: loading-animation 1s infinite linear;
+}
+
+.right > div > .channel_body .text pre::-webkit-scrollbar { height: 5px; background: transparent; }
+.right > div > .channel_body .text pre::-webkit-scrollbar-thumb { background: #3d4957; border-radius: 100px; }
+
+.right > div > .channel_body::-webkit-scrollbar { width: 10px; background: transparent; display: none; }
+.right > div > .channel_body::-webkit-scrollbar-thumb { background: #3d4957; border-radius: 100px; }
+
+
+.right > div > .message_input {
+    width: 100%;
+}
+
+.right > div > .message_input input {
+    padding: 15px 20px;
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: #333C48;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Mark Pro Regular';
+}
+
+.right > div > .message_input input::placeholder {
+    color: rgb(128, 150, 175);
+}
+
+
+.right > div > .channel_body .text a {
+    color: rgb(168, 186, 240);
+    text-decoration: none;
+    border-bottom: 1px solid rgb(168, 186, 240);
+}
+
+
+@media only screen and (max-width: 850px) {
+    .right > div > .channel_head .search-box {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .right > div > .channel_body {
+        width: 80vw;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .mac-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .right {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
