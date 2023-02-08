@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'Mark Pro Bold';
+    src: url("./Mark Pro Bold.ttf");
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body { background: url("./dddepth-302.jpg") no-repeat; background-size: cover; display: flex; justify-content: center; align-items: center; }
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+
+.photo-maker {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 25px #121216;
+    position: absolute;
+    background: #1a1a1a;
+    width: 70%;
+}
+
+.photo-maker .photo {
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photo-maker .tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #1a1a1a;
+    cursor: move;
+}
+
+.photo-maker .tools .tools_ ul {
+    width: 110px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.photo-maker .tools .tools_ ul li {
+    filter: opacity(0.6) drop-shadow(0 0 rgb(161, 161, 161));
+}
+
+.photo-maker .tools .tools_ ul li:last-child {
+    margin-right: 11px;
+}
+
+.photo-maker .tools .tools_ ul li img {
+    width: 12.5px;
+    cursor: pointer;
+}
+
+.photo-maker .tools .des {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.photo-maker .tools .des .circle {
+    padding: 0 4px;
+}
+
+.photo-maker .tools .des .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.photo-maker .tools .des .red {
+    background-color: #ff605c;
+}
+
+.photo-maker .tools .des .yellow {
+    background-color: #ffbd44;
+}
+
+.photo-maker .tools .des .green {
+    background-color: #00ca4e;
+}
+
+.photo-maker .tools .desc a {
+    font-size: 12px;
+    font-family: 'Mark Pro Regular';
+    color: rgb(223, 223, 223);
+    user-select: none;
+}
+
+.photo-maker .tools .desc a b {
+    color: rgb(231, 231, 231);
+}
+
+.photo-maker #photo_ {
+    width: 761px;
+    height: 761px;
+    background: #0d0d1a;
+    user-select: none;
+}
+
+#type-msg {
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #303030;
+    background: #272727;
+    color: whitesmoke;
+    font-family: 'Mark Pro Regular';
+    font-size: 12.5px;
+    position: absolute;
+    user-select: none;
+    z-index: 10;
+}
+
+.photo-maker #photo_ .text-input {
+    padding: 10px 15px;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    outline: none;
+    background: #272727;
+    color: white;
+    font-family: 'Mark Pro Regular';
+}
+
+.photo-maker #photo_ .shape {
+    cursor: pointer;
+    user-select: none;
+}
+
+.photo-maker #photo_ .resize {
+    outline: 1px dashed rgb(190, 190, 190);
+    cursor: pointer;
+}
+
+.photo-maker #photo_ .contain {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.photo-maker #photo_ .head {
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.photo-maker #photo_ .head img {
+    width: 30px;
+    border-radius: 100%;
+    margin-top: 2px;
+}
+
+.photo-maker #photo_ .head a {
+    font-family: 'Mark Pro Regular';
+    font-size: 15px;
+    margin-top: 2px;
+    color: #90c0ff;
+}
+
+.photo-maker #photo_ .body {
+    width: 100%;
+}
+
+.photo-maker #photo_ .body svg {
+    width: 100%;
+    margin-top: -70px;
+}
+
+.photo-maker #photo_ .body .text {
+    margin-top: -600px;
+}
+
+.photo-maker #photo_ .body .text h1 {
+    color: white;
+    font-size: 70px;
+    font-family: 'Mark Pro Medium';
+    line-height: 75px;
+}
+
+.photo-maker #photo_ .body .highlight {
+    font-size: 70px;
+    margin-top: -625px;
+    /* background: linear-gradient(to right, #69ffff, #5985ff); */
+    background: linear-gradient(to right, #ff69c6, #ca59ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Mark Pro Black';
+}
+
+.photo-maker #photo_ .body #description_ {
+    margin-top: 50px;
+    color: white;
+    font-family: 'Mark Pro Regular';
+}
+
+.photoflex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.photo-maker .photo-editor {
+    max-width: 30%;
+    height: 100%;
+    background: #1a1a1a;
+    padding: 25px;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+.photo-maker .photo-editor::-webkit-scrollbar {
+    background: #1a1a1a;
+    width: 5px;
+}
+
+.photo-maker .photo-editor::-webkit-scrollbar-thumb {
+    background: #272727;
+    border-radius: 100px;
+}
+
+.photo-maker .photo-editor input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    outline: none;
+    background: #272727;
+    color: white;
+    font-family: 'Mark Pro Regular';
+    width: 100%;
+}
+
+.photo-maker .photo-editor textarea {
+    padding: 10px 15px;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    outline: none;
+    background: #272727;
+    color: white;
+    font-family: 'Mark Pro Regular';
+    width: 100%;
+    resize: vertical;
+}
+
+.photo-maker .photo-editor input[type="color"] {
+    display: none;
+}
+
+.photo-maker .photo-editor .cate {
+    font-family: 'Mark Pro Regular';
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 2.5px;
+    color: rgb(241, 241, 241);
+}
+
+.photo-maker .photo-editor p {
+    font-family: 'Mark Pro Regular';
+    margin-bottom: 10px;
+    margin-left: 2.5px;
+    color: rgb(194, 194, 194);
+}
+
+.photo-maker .photo-editor div {
+    margin-bottom: 20px;
+}
+
+.photo-maker .photo-editor input {
+    margin-bottom: 5px;
+}
+
+.photo-maker .photo-editor input[type="range"] {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    -webkit-appearance: none;
+    border-radius: 100px;
+    padding: 2.5px;
+    background: #303030;
+    outline: none;
+    accent-color: #5a5a5a;
+    width: 100%;
+}
+
+.photo-maker .photo-editor .input-color label {
+    cursor: pointer;
+    font-family: 'Mark Pro Regular';
+    font-size: 15px;
+    margin-left: 2.5px;
+    color: white;
+}
+
+.photo-maker .photo-editor button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #253477;
+    border-radius: 5px;
+    outline: none;
+    background: #4b66dd;
+    color: white;
+    font-family: 'Mark Pro Regular';
+    width: 100%;
+    transition: 0.1s;
+}
+
+.photo-maker .photo-editor > div:nth-child(2) {
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+.photo-maker .photo-editor button:hover {
+    background: #445cc9;
+}
+
+.photo-maker .photo-editor button:active {
+    background: #3d53b4;
+}
