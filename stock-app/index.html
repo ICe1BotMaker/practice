@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./s.css">
+</head>
+<body>
+    <div class="modal-bg" id="buyModal-bg">
+        <div class="modal" id="buyModal">
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.021 512.021" style="enable-background:new 0 0 512.021 512.021;" xml:space="preserve" width="512" height="512"><g><path d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/></g></svg>
+            </div>
+
+            <p class="sub-title color-dark">Price</p>
+
+            <p class="fs30">
+                <span class="title-default">$</span>
+                <span class="title" id="last-price">25,000</span>
+            </p>
+
+            <div class="d-flex mt15">
+                <div class="invalid-item">
+                    <p class="sub-title fs16 color-default">Card Number</p>
+                    <input class="input wd220 mt5" type="text" id="card-num" placeholder="0000-0000-0000-0000">
+                    <p class="invalid mt5">Please enter the number correctly.</p>
+                </div>
+                <div class="ml10 invalid-item">
+                    <p class="sub-title fs16 color-default">Expiration Period</p>
+                    <input class="input wd80 mt5" type="text" id="card-date" placeholder="01 / 01">
+                    <p class="invalid mt5">Please enter the valid period correctly.</p>
+                </div>
+            </div>
+
+            <div class="mt10">
+                <div class="invalid-item">
+                    <p class="sub-title fs16 color-default">Card Svc</p>
+                    <input class="input wd80 mt5" type="text" id="card-svc" placeholder="123">
+                    <p class="invalid mt5">Please enter svc correctly.</p>
+                </div>
+
+                <div class="mt10 invalid-item">
+                    <p class="sub-title fs16 color-default">Card Password</p>
+                    <input class="input wd80 mt5" type="password" id="card-pass" placeholder="1234">
+                    <p class="invalid mt5">Please enter the password correctly.</p>
+                </div>
+            </div>
+
+            <button class="primary-button" id="buyItem">Buy</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p class="sub-title">A Stock Purchase Price</p>
+        
+        <p class="fs30">
+            <span class="title-default">$</span>
+            <span class="title" id="price">25,000</span>
+        </p>
+
+        <input class="primary-range" type="range" id="range" value="25000" min="0" max="100000" step="50">
+        
+        <button class="primary-button" id="buy">Buy</button>
+    </div>
+
+    <script src="./s.js"></script>
+</body>
+</html>
