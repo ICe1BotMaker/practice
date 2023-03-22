@@ -1,0 +1,192 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-dark {
+    color: rgb(55, 60, 70) !important;
+}
+
+.color-default {
+    color: rgb(143, 149, 161) !important;
+}
+
+.fs30 {
+    font-size: 30px;
+}
+
+.fs16 {
+    font-size: 16px !important;
+}
+
+.mt5 { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
+.mt15 { margin-top: 15px; }
+.mt20 { margin-top: 20px; }
+
+.ml5 { margin-left: 5px; }
+.ml10 { margin-left: 10px; }
+
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+
+.mb5 { margin-bottom: 5px; }
+.mb10 { margin-bottom: 10px; }
+
+.wd50 { width: 50px; }
+.wd80 { width: 82.5px; }
+.wd100 { width: 100px; }
+.wd150 { width: 150px; }
+.wd200 { width: 200px; }
+.wd220 { width: 220px; }
+.wd250 { width: 250px; }
+.wd300 { width: 300px; }
+
+.card {
+    padding: 15px 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.sub-title {
+    font-family: 'Mark Pro Regular';
+    font-size: 18px;
+    color: rgb(188, 191, 197);
+}
+
+.title-default {
+    font-family: 'Mark Pro Medium';
+    color: rgb(127, 136, 153);
+}
+
+.title {
+    margin-left: -5px;
+    font-family: 'Mark Pro Black';
+    color: rgb(64, 73, 92);
+}
+
+.primary-range {
+	width:100%;
+	-webkit-appearance: none;
+	background: transparent;
+}
+
+.primary-range::-webkit-slider-thumb { 
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: rgb(74, 125, 236);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 3px solid white;
+    margin-top: -5px;
+}
+
+.primary-range::-webkit-slider-runnable-track {
+    height: 10px;
+    cursor: pointer; 
+    background: rgb(241, 241, 241);
+    border-radius: 100px;
+}
+
+.primary-button {
+    cursor: pointer;
+    margin-top: 20px;
+    background: rgb(74, 125, 236);
+    color: white;
+    font-family: 'Mark Pro Medium';
+    font-size: 14px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    transition: .2s;
+}
+
+.primary-button:hover {
+    background: rgb(88, 137, 241);
+}
+
+.modal-bg {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.modal-bg .modal {
+    padding: 15px 20px;
+    background: white;
+    border-radius: 15px;
+    transform: scale(.75);
+    transition: .25s;
+}
+
+.input {
+    background: white;
+    border: 2px solid rgb(226, 226, 226);
+    font-family: 'Mark Pro Medium';
+    font-size: 14px;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: .1s;
+}
+
+.input::placeholder {
+    color: rgb(179, 179, 179);
+}
+
+.input:focus {
+    border: 2px solid rgb(121, 163, 255);
+    background: white;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+.invalid {
+    font-size: 14px;
+    overflow: hidden;
+    height: 0;
+    transition: height .2s;
+    color: rgb(255, 45, 90);
+}
+
+.close {
+    position: absolute;
+    width: 93.4%;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.close svg {
+    width: 15px;
+    height: 15px;
+    fill: gray;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.close svg:hover {
+    fill: black;
+}
